@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+  resources :airplanes, only: :index do
+    get :transfer_state, on: :member
+  end
+
+  root to: 'airplanes#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
