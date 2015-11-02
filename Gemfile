@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+## TODO: LOCK VERSION OF GEMS AND SORT GEMS BY GROUPS
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap-select', '~> 1.7.3'
 end
@@ -46,7 +48,11 @@ gem 'sidekiq', '~> 3.3.4'
 gem 'redis-rails'
 gem 'faye-redis'
 
+
 gem 'render_anywhere', require: false
+
+# For share configuration across backend and frontend
+gem 'global' 
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -71,5 +77,12 @@ group :development, :test do
   gem 'better_errors', '~> 2.1.1'
   gem 'binding_of_caller', '~> 0.7.2'
   gem 'pry-rails', '~> 0.3.3'
+  
+  gem 'rspec-rails'
+  gem 'rspec-wait'
+  gem 'database_cleaner'
 end
 
+group :test do
+  # gem 'rspec-sidekiq'
+end
