@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+%w(Chicago Copenhagen Moscow).each do |name|
+  Airplane.find_or_create_by!(name: name)
+end
