@@ -1,3 +1,5 @@
+### TODO: REMOVE EMPTY FILE
+
 # == Schema Information
 #
 # Table name: airplanes

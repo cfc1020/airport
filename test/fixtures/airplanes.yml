@@ -1,3 +1,5 @@
+# TODO: Use FactoryGirl instead of fixture and remove empty file
+
 # == Schema Information
 #
 # Table name: airplanes
